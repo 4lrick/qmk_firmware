@@ -78,13 +78,13 @@ static void set_keylog(uint16_t keycode, keyrecord_t *record) {
     key_name     = ' ';
     last_keycode = keycode;
     if (IS_QK_MOD_TAP(keycode)) {
-        if (record->tap.count) {
-            keycode = QK_MOD_TAP_GET_TAP_KEYCODE(keycode);
-        } else {
+        // if (record->tap.count) {
+            // keycode = QK_MOD_TAP_GET_TAP_KEYCODE(keycode);
+        // } else {
             keycode = 0xE0 + biton(QK_MOD_TAP_GET_MODS(keycode) & 0xF) + biton(QK_MOD_TAP_GET_MODS(keycode) & 0x10);
-        }
-    } else if (IS_QK_LAYER_TAP(keycode) && record->tap.count) {
-        keycode = QK_LAYER_TAP_GET_TAP_KEYCODE(keycode);
+        // }
+    // } else if (IS_QK_LAYER_TAP(keycode) && record->tap.count) {
+        // keycode = QK_LAYER_TAP_GET_TAP_KEYCODE(keycode);
     } else if (IS_QK_MODS(keycode)) {
         keycode = QK_MODS_GET_BASIC_KEYCODE(keycode);
     } else if (IS_QK_ONE_SHOT_MOD(keycode)) {
