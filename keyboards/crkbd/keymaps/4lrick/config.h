@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MK_KINETIC_SPEED
 #define MOUSEKEY_DELAY 5
 #define MOUSEKEY_INTERVAL 10
-#define MOUSEKEY_MOVE_DELTA 16
+#define MOUSEKEY_MOVE_DELTA 50
 #define MOUSEKEY_INITIAL_SPEED 100
 #define MOUSEKEY_BASE_SPEED 5000
 #define MOUSEKEY_DECELERATED_SPEED 400
